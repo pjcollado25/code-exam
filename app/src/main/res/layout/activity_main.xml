@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+
+    <EditText
+        android:id="@+id/fullName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/full_name"
+        android:layout_marginTop="16dp"
+        android:textSize="26sp"
+        android:inputType="text"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/emailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/email_address"
+        android:textSize="26sp"
+        android:layout_below="@id/fullName"
+        android:layout_marginTop="16dp"
+        android:inputType="textEmailAddress"
+        android:importantForAutofill="no" />
+    <EditText
+        android:id="@+id/mobileNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="26sp"
+        android:hint="@string/mobile_number"
+        android:layout_below="@id/emailAddress"
+        android:layout_marginTop="16dp"
+        android:inputType="number"
+        android:importantForAutofill="no" />
+    <TextView
+        android:layout_below="@+id/mobileNumber"
+        android:id="@+id/dateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/date_of_birth"
+        android:textSize="26sp" />
+   <LinearLayout
+       android:layout_marginTop="30dp"
+       android:id="@+id/calendarView"
+       android:layout_below="@id/dateLabel"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       tools:ignore="UseCompoundDrawables">
+
+       <TextView
+           android:id="@+id/selected_date"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="01/01/2001"
+           android:textSize="26sp"
+           tools:ignore="HardcodedText" />
+       <ImageView
+           android:layout_marginStart="20dp"
+           android:id="@+id/datePickerButton"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@drawable/ic_calendar"
+           android:importantForAccessibility="no" />
+
+   </LinearLayout>
+
+           <TextView
+               android:layout_below="@+id/calendarView"
+               android:layout_gravity="top"
+               android:id="@+id/agetext"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="10dp"
+               android:layout_marginTop="16dp"
+               android:text=""
+               android:textSize="26sp"
+               />
+    <LinearLayout
+        android:id="@+id/genderlayout"
+        android:layout_below="@+id/agetext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_gravity="top"
+            android:id="@+id/genderText"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="16dp"
+            android:text="Gender:"
+            android:textSize="26sp"
+            tools:ignore="HardcodedText" /><TextView
+        android:layout_gravity="top"
+        android:id="@+id/gender"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/male"
+        android:textSize="26sp"
+        />
+        <Spinner
+            android:id="@+id/genderSpinner"
+            android:layout_marginTop="16dp"
+            android:layout_width="50dp"
+            android:layout_height="65dp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/genderlayout"
+        android:layout_marginTop="50dp"
+        android:textColor="@color/white"
+        android:text="Submit"
+        android:textSize="32sp"
+        tools:ignore="HardcodedText" />
+
+</RelativeLayout>
